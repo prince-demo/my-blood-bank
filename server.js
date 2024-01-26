@@ -40,16 +40,16 @@ app.use("/api/v1/admin", adminRoutes);
 
 
 // my static folder
-// app.use(express.static(path.join(__dirname,'./client/build')))
-// static Routes
-// app.get('*',function (req, res) {
-//   res.sendFile(path.join(__dirname,'./client/build/index.html'))
-// })
-// app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(__dirname,'./client/build')))
+static Routes
+app.get('*',function (req, res) {
+  res.sendFile(path.join(__dirname,'./client/build/index.html'))
+})
+app.use(express.static(path.join(__dirname, './client/build')));
 
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, './client/build/index.html'));
-// });
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 //port
 const port = process.env.PORT || 8080;
