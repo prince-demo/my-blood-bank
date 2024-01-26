@@ -41,7 +41,7 @@ app.use("/api/v1/admin", adminRoutes);
 
 // my static folder
 app.use(express.static(path.join(__dirname,'./client/build')))
-static Routes
+// static Routes
 app.get('*',function (req, res) {
   res.sendFile(path.join(__dirname,'./client/build/index.html'))
 })
